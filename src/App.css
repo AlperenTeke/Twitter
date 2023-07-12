@@ -1,0 +1,418 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  width: 100vw;
+  height: 100vh;
+}
+
+li{
+  list-style-type: none;
+}
+
+.container{
+  width: 70vw;
+  height: 100vh;
+  margin:auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap:0px;
+  background-color: aquamarine;
+}
+
+.container > div:nth-child(2n) {
+  background-color: brown;
+}
+
+.div1 { grid-area: 1 / 1 / 6 / 2; }
+.div2 { grid-area: 1 / 2 / 6 / 5; }
+.div3 { grid-area: 1 / 5 / 6 / 6; }
+
+/* Master Başlangıç */
+
+.div1{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  height: 100vh;
+}
+
+.div1 .sidebar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 22.5vh;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  border-right: 2px solid #333 ;
+}
+
+.div1 .sidebar .sidebar_up .sidebar_logo{
+  margin-left: 5px;
+  font-size: 25px;
+}
+
+.div1 .sidebar .sidebar_up ul{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.div1 .sidebar .sidebar_up ul li{
+  padding: 10px;
+  width: 10vw;
+  transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 15px;
+}
+
+.div1 .sidebar .sidebar_up ul li:hover{
+  background-color: rgba(150, 150, 150, 0.5);
+}
+
+.div1 .sidebar .sidebar_up ul li a{
+  display: flex;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  align-items: center;
+  column-gap: 13px;
+}
+
+.div1 .sidebar .sidebar_up .sidebar_tweetBTN{
+  margin-top:10px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div1 .sidebar .sidebar_up .sidebar_tweetBTN button{
+  width: 12vw;
+  height: 6vh;
+  border-radius: 30px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #1D9AEE;
+  border: none;
+  cursor: pointer;
+}
+
+.div1 .sidebar .sidebar_up .sidebar_tweetBTN button:hover{
+  opacity: 0.8;
+}
+
+.div1 .sidebar .sidebar_down{
+  width: auto;
+  height: 100%;
+}
+
+.div1 .sidebar .sidebar_down ul li{
+  padding: 5px;
+  width: 13vw;
+  margin-left: 5px;
+  border-radius: 50px;
+  transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.div1 .sidebar .sidebar_down ul li:hover{
+  background-color: rgba(150, 150, 150, 0.5);
+}
+
+.div1 .sidebar .sidebar_down ul li a{
+  display: flex;
+  column-gap:10px;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 5px;
+}
+
+.div1 .sidebar .sidebar_down ul li a .sidebar_img img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.div1 .sidebar .sidebar_down ul li a .sidebar_name h2{
+  font-size: 15px;
+}
+
+.div1 .sidebar .sidebar_down ul li a .sidebar_name h5{
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.div1 .sidebar .sidebar_down ul li a .sidebar_options{
+  margin-left:28px;
+  font-size: 16px;
+  margin-bottom: 19px;
+}
+
+/* Master Bitiş */
+
+/* Zeus Başlangıç */
+.nav {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  font-size: 36px;
+  padding-left: 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.heading{
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+
+.cont{
+  overflow-y: scroll;
+  max-height: calc(100% - 120px);
+  scroll-behavior: smooth;
+}
+
+.cont::-webkit-scrollbar{
+  display: none;
+}
+
+.username{
+  font-size: 10px;
+  color: #b0b0e0;
+  display: inline-flex;
+  margin-left: 5px;
+  align-items: center;
+  font-weight: 400 !important;
+  flex-direction: column;
+}
+
+.heading ul{
+  display: flex;
+  width: 100%;
+  background-color: black;
+  height: 100%;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.heading ul li{
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.activeLi{
+  border-bottom: 5px blue solid;
+}
+
+.left{
+  display:flex;
+  width: 120px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweetCreate{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  background-color: black;
+}
+
+.right{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+}
+
+.rightbot{
+ background-color: black;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding-right: 15px;
+ margin-bottom: 10px;
+}
+
+.rightbot button{
+  outline: none;
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(45deg, blue, red);
+  padding: 5px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.rightbot > div{
+  display: flex;
+  gap: 15px;
+}
+.rightbot>div>*:hover{
+  color:#0f73ff !important;
+  transition: ease-in-out all 0.25s;
+}
+.rightbot button:hover{
+  background-image: linear-gradient(135deg, red, blue);
+}
+
+.right textarea{
+  width: 100%;
+  margin: 15px;
+  height: min-content;
+  outline: none;
+  word-break: break-word;
+  border: none;
+  color: white;
+  background-color: rgba(0,0,0,1);
+  resize: none;
+}
+
+.left img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.tweet {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 110px;
+  background-color: black;
+  color: white;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.tweet > div {
+  gap: 8px;
+  display: flex;
+  flex-direction:column ;
+}
+
+.tweet img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  margin: 25px;
+}
+
+/* Zeus Bitiş */
+
+/* Alperen Başlangıc  */
+.div3{
+  background-color: black;
+  border-left: #333 solid 2px;
+}
+.search-bar
+{
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  background-color: #333;
+}
+
+
+
+#search
+{ 
+  margin-left: 5px;
+  width: 200px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size:15px;
+  -moz-transition: width 0.4s ease-in-out;
+  -o-transition: width 0.4s ease-in-out;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out, border 0.4s ease-in;
+  background-color: #333;
+  color: #fff;
+}
+
+#search:focus{
+  border-radius: 5px;
+  width: 210px;
+  border: 1px solid #fff;
+}
+
+
+.ilgiGündem
+{
+  width: 95%;
+  border-radius: 12px;
+  height: 92%;
+  margin: 10px auto;
+  padding-bottom: 5px;
+  background-color: #222;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.ilgiGündem::-webkit-scrollbar{
+  display: none;
+}
+
+.ilgiGündem .genelBaslik
+{
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px 0px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.ilgiGündem .cards
+{
+  color: #fff;
+  margin-left: 5%;
+  margin-top: 10%;
+  opacity: 0.7;
+  margin-bottom: 15px;
+  background-color: #222;
+  transition: transform 0.4s;
+}
+
+.cards:hover
+{
+  transform:scale(1.1);
+  opacity: 1;
+  transform: 0.8ms;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+  transition: ease-in-out all 0.25s;
+}
+
+.cards .aciklama
+{
+  font-size: 18px;
+}
+
+.cards .altBaslik
+{
+font-size: 18px;
+}
+
+.cards .içerik
+{
+  font-size: 16px;
+}
+
+/* Alperen Bitiş  */
